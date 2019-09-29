@@ -13,7 +13,8 @@ import Dashboard from './components/dashboard'
 import requireAuth from './components/require-auth'
 
 const networkInterface = createHttpLink({
-  uri: '/graphql'
+  uri: '/graphql',
+  credentials: 'same-origin'
 })
 
 const cache = new InMemoryCache({
